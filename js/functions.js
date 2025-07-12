@@ -453,7 +453,7 @@ function loadQuestion(index) {
   isAnswered = false;
 
   // Показываем стандартную "начальную" картинку
-  updateBoxImage("/img/Начали.png", "150%", "75%", "510px", "510px");
+  updateBoxImage("img/Начали.png", "150%", "75%", "510px", "510px");
 
   let textHTML = q.text;
   document.getElementById("text").innerHTML = textHTML;
