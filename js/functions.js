@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Каждая иконка — это объект с путём и желаемым размером
   const icons = [
-    { src: '/img/Взрыв1.png', size: 24 },
-    { src: '/img/Взрыв2.png', size: 30 },
-    { src: '/img/Взрыв3.png', size: 20 },
-    { src: '/img/Взрыв4.png', size: 28 },
-    { src: '/img/Взрыв5.png', size: 26 },
-    { src: '/img/Взрыв6.png', size: 60 },
-    { src: '/img/Взрыв7.png', size: 50 }
+    { src: 'img/Взрыв1.png', size: 24 },
+    { src: 'img/Взрыв2.png', size: 30 },
+    { src: 'img/Взрыв3.png', size: 20 },
+    { src: 'img/Взрыв4.png', size: 28 },
+    { src: 'img/Взрыв5.png', size: 26 },
+    { src: 'img/Взрыв6.png', size: 60 },
+    { src: 'img/Взрыв7.png', size: 50 }
   ];
 
   btn.addEventListener('click', () => {
