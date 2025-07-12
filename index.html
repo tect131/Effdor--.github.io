@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="css/make.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="icon" href="./img/favicon.ico" >
+</head>
+
+<body>
+    <div class="slideshow-bg"></div>
+
+    <audio id="explosionSound" src="/audio/Звук взрыва.mp3" preload="auto"></audio>
+    <audio id="bgMusic" src="/audio/C418 (Minecraft OST).mp3" preload="auto" loop></audio>
+    <button id="musicToggle" class="music-btn">
+        <img id="musicIcon" src="/img/musicOn.png" alt="Музыка" width="24">
+    </button>
+    <div id="error-container"></div>
+    <div id="his-name"></div>
+    <audio id="wrongSound" src="/audio/NoThis.mp3" preload="auto"></audio>
+    <audio id="rightSound" src="/audio/YesThis.mp3" preload="auto"></audio>
+
+
+
+    <div class="wave w1"></div>
+    <div class="wave w2"></div>
+    <div class="wave w3"></div>
+    <div class="wave w4"></div>
+    
+    <div class="waveA w1A"></div>
+    <div class="waveA w2A"></div>
+    <div class="waveA w3A"></div>
+    <div class="waveA w4A"></div>
+
+    <div class="question-everything">
+    <button class="question" data-index="0">OrniO</button>
+    <button class="question" data-index="1">I_OproO</button>
+    <button class="question" data-index="2">Jakets</button>
+    <button class="question" data-index="3">EndGame_NOne</button>
+    </div>
+    <button class="btn-purple1 sound-btn" onclick="Next2()" id="nextBtn" >Продолжить</button>  
+
+
+    <div class="card">   
+        <div class="cell">
+            <div class="bg-image" ></div>
+            <p class="line1" id="text">Привет! Добро пожаловать на викторину по Effdor.
+                <br>  ㅤㅤ  Я, tect13, создал её просто так, от нечего делать.
+                <br>
+                <br>Ты готов пройти её?
+            </p>
+            <div class="button-container">
+                <button class="btn-purple" onclick="go()" id="btnPurple" >
+                    <span class="label" >НЕТ , не хочу</span>
+                </button>
+                <button class="btn-white sound-btn" onclick="letsGo()" id="btnWhite" >
+                    <span class="label">Да я готов</span>
+                </button>       
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Твой ник"  id="nickname">
+                </div>
+                <button id="submit" class="btn-white a1 sound-btn" onclick="Error1()" >Готово</button>
+                <button id="submit" class="btn-white a2 sound-btn" onclick="Next()" >Далее</button>
+                <button id="submit" class="btn-white a3 sound-btn" onclick="Next1()" >Далее</button>
+                <div id="image-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/functions.js"></script>
+</body>
+</html>
