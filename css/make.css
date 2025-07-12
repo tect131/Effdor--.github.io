@@ -39,29 +39,29 @@ body {
 
 @keyframes bgChange {
   0% {
-    background-image: url(img/13787581_xl.webp);
+    background-image: url(../img/13787581_xl.webp);
   }
 
   40% {
-    background-image: url(img/minecraft-aesthetic-brown-lighthouse-2l1zxh0vgrze8gs5.jpg);
+    background-image: url(../img/minecraft-aesthetic-brown-lighthouse-2l1zxh0vgrze8gs5.jpg);
   }
 
   60% {
-    background-image: url(img/minecraft-aesthetic-dark-green-mushroom-house-o4p5i28a4zglbs1l.jpg);
+    background-image: url(../img/minecraft-aesthetic-dark-green-mushroom-house-o4p5i28a4zglbs1l.jpg);
   }
 
   80% {
-    background-image: url(img/SpXZP.png);
+    background-image: url(../img/SpXZP.png);
   }
 
   100% {
-    background-image: url(img/stracciatella-village.jpg);
+    background-image: url(../img/stracciatella-village.jpg);
   }
 }
 
 @font-face {
   font-family: 'Minecraft Rus';
-  src: url('font/Minecraft.woff2') format('woff2');
+  src: url('../font/Minecraft.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -98,7 +98,7 @@ body {
   right: 65%;
   width: 480px;
   height: 480px;
-  background-image: url('img/приветствие_13.png');
+  background-image: url('../img/приветствие_13.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
