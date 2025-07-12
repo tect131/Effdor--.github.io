@@ -1,7 +1,7 @@
 let playerNickname = '';
 let box = document.querySelector(".bg-image");
 
-const clickSound = new Audio('/audio/звукНажатия.mp3'); 
+const clickSound = new Audio('audio/звукНажатия.mp3'); 
 clickSound.volume = 0.3;
 
 document.querySelectorAll('.sound-btn').forEach(btn => {
@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (music.paused) {
       music.play();
-      icon.src = "/img/musicOn.png"; // твоя иконка "вкл"
+      icon.src = "img/musicOn.png"; // твоя иконка "вкл"
     } else {
       music.pause();
-      icon.src = "/img/musicOff.png"; // твоя иконка "выкл"
+      icon.src = "img/musicOff.png"; // твоя иконка "выкл"
     }
   });
 });
@@ -113,7 +113,7 @@ function letsGo() {
   button1.remove();
   box.style.opacity = 0;
   setTimeout(function() {
-    box.style.backgroundImage = "url('/img/Хах.png')";
+    box.style.backgroundImage = "url('img/Хах.png')";
     box.style.opacity = 1;
     document.querySelector(".bg-image").style.top = "54%";
     document.querySelector(".bg-image").style.right = "60%";
@@ -129,9 +129,9 @@ function letsGo() {
 
 // Снизу код , относится к проверку ника 
   const errorSounds = [
-  '/audio/wrong1.mp3',
-  '/audio/wrong2.mp3',
-  '/audio/wrong3.mp3'
+  'audio/wrong1.mp3',
+  'audio/wrong2.mp3',
+  'audio/wrong3.mp3'
   ];
   function playRandomErrorSound() {
   const randomIndex = Math.floor(Math.random() * errorSounds.length);
@@ -233,7 +233,7 @@ function Error1() {
 
     box.style.opacity = 0;
     setTimeout(() => {
-    box.style.backgroundImage = "url('/img/Думаю.png')";
+    box.style.backgroundImage = "url('img/Думаю.png')";
     box.style.opacity = 1;
     document.querySelector(".bg-image").style.top = "40%";
     document.querySelector(".bg-image").style.right = "60%";
@@ -299,7 +299,7 @@ audio.play();
 function Next() {
   box.style.opacity = 0;
   setTimeout(() => {
-  box.style.backgroundImage = "url('/img/Эй.png')";
+  box.style.backgroundImage = "url('img/Эй.png')";
   box.style.opacity = 1;
   document.querySelector(".bg-image").style.top = "49%";
   document.querySelector(".bg-image").style.right = "65%";
@@ -320,7 +320,7 @@ function Next() {
 function Next1() {
   box.style.opacity = 0;
   setTimeout(() => {
-  box.style.backgroundImage = "url('/img/Начали.png')";
+  box.style.backgroundImage = "url('img/Начали.png')";
   box.style.opacity = 1;
   document.querySelector(".bg-image").style.top = "150%";
   document.querySelector(".bg-image").style.right = "75%";
@@ -351,8 +351,8 @@ const questions = [
     correctIndex: 2,
     correctResponse: "✅ Отлично, это был именно Jakets!",
     wrongResponse: "Ого, первый вопрос — и уже ошибка? <br>Хех, хотя я ведь тебя предупреждал 😏",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Кто был самым первым мэром на сервере?",
@@ -360,8 +360,8 @@ const questions = [
     correctIndex: 3,
     correctResponse:"✅Да, это был Wefody (кстати, именно у него я и украл некоторые вопросы 😄).",
     wrongResponse: "❌Нет, первым мэром был Wefody, а не этот тип.",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Кто был самым первым архитектором спавна на сервере?",
@@ -369,8 +369,8 @@ const questions = [
     correctIndex: 0,
     correctResponse:"Ага, этот негодник и был архитектором спавна!",
     wrongResponse: "Честно, я понимаю, почему ты ошибся — сам до сих пор не верю, что он был архитектором!",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Кто изображён на этой картине?",
@@ -379,8 +379,8 @@ const questions = [
     correctIndex: 3,
     correctResponse:"Легенды гласят, что самый живучий спрут на планете — это, конечно же, Евлампий.",
     wrongResponse: "Как можно не знать имя самого большого спрута на спавне?",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Кем были трое главных админов сервера?",
@@ -388,8 +388,8 @@ const questions = [
     correctIndex: 0,
     correctResponse:"Эх, они были лучшими админами... Надеюсь, однажды снова ими станут.",
     wrongResponse: "Знать админов — это база. Не знаешь? Срочно на пересдачу! (ну, или просто следующий вопрос 😄)",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Кто из админов обычно отвечает за медиа?",
@@ -397,18 +397,18 @@ const questions = [
     correctIndex: 1,
     correctResponse:"Вот ведь ирония — если бы не его видео, я бы никогда не попал на этот проект!",
     wrongResponse: "О, позор! Не знать того, кто оживлял сервер своими видео! Как ты мог?",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Узнаёшь место? Кто был автором этой общественной чаровальни?",
-    image: "/img/Чаровальня.png",
+    image: "img/Чаровальня.png",
     answers: ["Wefody", "tect13", "Runusik", "MakpoTa"],
     correctIndex: 3,
     correctResponse:"Вроде как это было первое общественное деяние от игроков🤔",
     wrongResponse: "Ну надо же! Пользовался всё это время, а даже не знал, кто это построил. Теперь будешь знать!",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Когда был открыт сервер?",
@@ -416,8 +416,8 @@ const questions = [
     correctIndex: 3,
     correctResponse:"Эх, с этого всё и началось… Людей было — не сосчитать!",
     wrongResponse: "Честно говоря, я и сам не помню😅",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Имя того, кто возвёл статую Иссуса, давно стало легендой... А помнишь ли ты его имя?",
@@ -425,8 +425,8 @@ const questions = [
     correctIndex: 1,
     correctResponse:"Точно! Это ведь было первое действительно масштабное сооружение на сервере.",
     wrongResponse: "Ты заходил в ад, видел это… но не знал, кто за ним стоит. Теперь знаешь",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
   {
     text: "Имя того, кто снова и снова разрушал спавн, скрываясь под разными никами... ты его помнишь?",
@@ -434,8 +434,8 @@ const questions = [
     correctIndex: 0,
     correctResponse:"Вот он злой гений (без ни ?)",
     wrongResponse: "Если не знаешь — значит, просто не довелось столкнуться.",
-    correctImage: "/img/Правильно.png",
-    wrongImage: "/img/Уже.png"
+    correctImage: "img/Правильно.png",
+    wrongImage: "img/Уже.png"
   },
 ];
 
@@ -605,7 +605,7 @@ function showFinalResults() {
 
   // Картинка финала
   const finalImg = document.createElement("img");
-  finalImg.src = "/img/love.png";
+  finalImg.src = "img/love.png";
   finalImg.alt = "Спасибо за участие";
   finalImg.classList.add("question-image");
 
