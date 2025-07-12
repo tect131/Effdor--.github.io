@@ -148,7 +148,7 @@ function spawnErrorParticles() {
     const particle = document.createElement('div');
     particle.classList.add('particle');
 
-    particle.innerHTML = `<img src="/img/angry.png" width="32" height="32" style="image-rendering: pixelated;">`;
+    particle.innerHTML = `<img src="img/angry.png" width="32" height="32" style="image-rendering: pixelated;">`;
 
     particle.style.position = 'fixed';
 
@@ -259,7 +259,7 @@ function Error1() {
 
   toast.innerHTML = `
     <div style="display: flex; align-items: center; gap: 10px;">
-      <img src="/img/Error.png" alt="Ошибка" style="width: 25px; height: 25px;">
+      <img src="img/Error.png" alt="Ошибка" style="width: 25px; height: 25px;">
       <p style="margin: 0;">${message}</p>
     </div>
   `;
@@ -289,7 +289,7 @@ function Error1() {
 }
 
 const cleaningSounds = (
-'/audio/cleaning.mp3'
+'audio/cleaning.mp3'
 );
 function playCleaningSound(){
 const audio = new Audio(cleaningSounds);
