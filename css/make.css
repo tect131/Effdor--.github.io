@@ -1,0 +1,542 @@
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+body {
+  transition: background-color 1s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  /* чтобы не появлялись скроллы */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slideshow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999; /* Уходить за всё */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: bgChange 40s infinite ease-in-out;
+}
+
+
+@keyframes bgChange {
+  0% {
+    background-image: url(/img/13787581_xl.webp);
+  }
+
+  40% {
+    background-image: url(/img/minecraft-aesthetic-brown-lighthouse-2l1zxh0vgrze8gs5.jpg);
+  }
+
+  60% {
+    background-image: url(/img/minecraft-aesthetic-dark-green-mushroom-house-o4p5i28a4zglbs1l.jpg);
+  }
+
+  80% {
+    background-image: url(/img/SpXZP.png);
+  }
+
+  100% {
+    background-image: url(/img/stracciatella-village.jpg);
+  }
+}
+
+@font-face {
+  font-family: 'Minecraft Rus';
+  src: url('/font/Minecraft.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.card {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Minecraft Rus';
+}
+
+.cell {
+  position: relative;
+  background-color: rgb(20, 18, 21);
+  border: 3px solid rgb(148, 52, 239);
+  /* border: 3px solid rgb(117, 52, 239); */
+  border-radius: 20px 20px 20px 0px;
+  width: 90%;
+  max-width: 670px;
+  height: auto;
+  margin-top: -300px;
+  /*-230 300*/
+  z-index: 1000;
+  animation: pulse-glow 8s infinite ease-in-out;
+}
+
+.bg-image {
+  position: absolute;
+  top: 29%;
+  right: 65%;
+  width: 480px;
+  height: 480px;
+  background-image: url('/img/приветствие_13.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+/* .bg-image {
+    position: absolute;
+    top: 35%;
+    right: 65%;
+    width: 530px;
+    height: 530px;
+    background-image: url('/img/Думаю.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; 
+    transition: opacity 1s ease;
+    opacity: 1;
+} */
+/* .bg-image {
+    position: absolute;
+    top: 52%;
+    right: 60%;
+    width: 400px;
+    height: 410px;
+    background-image: url('/img/Хах.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; 
+} */
+@keyframes pulse-glow {
+  0% {
+    box-shadow:
+      0 0 5px rgb(148, 52, 239),
+      0 0 15px rgb(148, 52, 239),
+      0 0 30px rgba(148, 52, 239, 0.7),
+      0 0 60px rgba(148, 52, 239, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(148, 52, 239),
+      0 0 25px rgb(148, 52, 239),
+      0 0 50px rgba(148, 52, 239, 0.9),
+      0 0 100px rgba(148, 52, 239, 0.7);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(148, 52, 239),
+      0 0 15px rgb(148, 52, 239),
+      0 0 30px rgba(148, 52, 239, 0.7),
+      0 0 60px rgba(148, 52, 239, 0.5);
+  }
+}
+
+@keyframes pulse-glow-blue {
+  0% {
+    box-shadow:
+      0 0 5px rgb(127, 52, 239),
+      0 0 15px rgb(124, 52, 239),
+      0 0 30px rgba(105, 52, 239, 0.7),
+      0 0 60px rgba(108, 52, 239, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(114, 52, 239),
+      0 0 25px rgb(121, 52, 239),
+      0 0 50px rgba(124, 52, 239, 0.9),
+      0 0 100px rgba(111, 52, 239, 0.7);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(111, 52, 239),
+      0 0 15px rgb(114, 52, 239),
+      0 0 30px rgba(121, 52, 239, 0.7),
+      0 0 60px rgba(99, 52, 239, 0.5);
+  }
+}
+
+.line1 {
+  color: hsl(279, 100%, 97%);
+  text-align: center;
+  font-size: 23px;
+  line-height: 35px;
+  padding: 20px;
+  margin: 0;
+}
+
+.button-container {
+  position: relative;
+  top: 13%;
+  left: 52%;
+
+}
+.btn-purple1,
+.btn-purple,
+.btn-white {
+  width: 100%;
+  max-width: 150px;
+  /* или 130px */
+  margin: 0px 5px 0px 10px;
+  z-index: 10000;
+  border-radius: 8px;
+  border: none;
+  padding: 17px 20px;
+  cursor: pointer;
+}
+
+.btn-purple {
+  background: #8e44ec;
+  color: white;
+  box-shadow: 0 4px 0 #6c2dbb;
+  transition: all 0.1s ease-in-out;
+  width: 150px;
+  height: 48px;
+}
+
+.btn-purple:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #6c2dbb;
+}
+
+.btn-purple:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #6c2dbb;
+}
+
+.btn-white {
+  background: #f5f5f5;
+  color: #5c276c;
+  font-weight: 600;
+  box-shadow: 0 4px 0 #d0d0d0;
+  transition: all 0.1s ease-in-out;
+  width: 130px;
+  height: 48px;
+}
+
+.btn-white:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #d0d0d0;
+}
+
+.btn-white:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #d0d0d0;
+}
+
+.input-field {
+  position: absolute;
+  bottom: 340px;
+  /* Сколько вниз от .cell - можешь менять по вкусу */
+  transform: translateX(-50%);
+  /* Центровка по центру */
+  display: none;
+  z-index: 900;
+  width: 400px;
+}
+
+.input {
+  position: relative;
+  padding: 20px;
+  font-family: 'Minecraft Rus';
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 400px;
+  height: 60px;
+  z-index: 900;
+  border-radius: 8px;
+  background-color: rgb(20, 18, 21);
+  border: 3px solid rgb(216, 230, 58);
+  animation: pulse-welloy 8s infinite ease-in-out;
+}
+
+@keyframes pulse-welloy {
+  0% {
+    box-shadow:
+      0 0 5px rgb(202, 239, 52),
+      0 0 10px rgb(211, 239, 52),
+      0 0 15px rgba(211, 239, 52, 0.7),
+      0 0 20px rgba(239, 233, 52, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(220, 239, 52),
+      0 0 15px rgb(217, 239, 52),
+      0 0 20px rgba(220, 239, 52, 0.9),
+      0 0 25px rgba(195, 239, 52, 0.7);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(233, 239, 52),
+      0 0 10px rgb(211, 239, 52),
+      0 0 15px rgba(223, 239, 52, 0.7),
+      0 0 20px rgba(214, 239, 52, 0.5);
+  }
+}
+
+.btn-white.a1 {
+  position: relative;
+  display: none;
+  left: 25%;
+  text-align: center;
+}
+
+.btn-white.a2 {
+  position: relative;
+  display: none;
+  left: 25%;
+  text-align: center;
+}
+
+.btn-white.a3 {
+  position: relative;
+  display: none;
+  left: 25%;
+  text-align: center;
+}
+
+.question-everything {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Minecraft Rus';
+  z-index: 1000;
+
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 10000;
+  gap: 30px; /* Отступы между блоками */
+  width: 900px; /* или сколько нужно, чтобы влезало два блока */
+}
+
+.question {
+  background-color: #5c276c;
+  width: 315px;
+  height: 80px;
+  border-radius: 25px;
+  font-family: 'Minecraft Rus';
+  cursor: pointer;
+  background-color: rgb(20, 18, 21);
+  border: 3px solid rgb(60, 27, 101);
+  animation: pulse-black 8s infinite ease-in-out;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  box-shadow: 0 4px 0 #4b2e8d;
+  transition: all 0.2s ease-in-out;
+  z-index: 10000;
+}
+
+.question:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #3a1a45;
+  background-color: #6441c4;
+}
+
+.question:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+@keyframes pulse-black {
+  0% {
+    box-shadow:
+      0 0 5px rgb(62, 25, 108),
+      0 0 10px rgb(50, 21, 101),
+      0 0 15px rgba(71, 26, 138, 0.7),
+      0 0 20px rgba(65, 27, 136, 0.5);
+  }
+
+  25% {
+    box-shadow:
+      0 0 7px rgb(65, 23, 112),
+      0 0 12px rgb(58, 24, 115),
+      0 0 17px rgba(76, 28, 142, 0.75),
+      0 0 22px rgba(69, 28, 139, 0.55);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(68, 23, 122),
+      0 0 15px rgb(82, 28, 153),
+      0 0 20px rgba(89, 33, 161, 0.9),
+      0 0 25px rgba(82, 29, 140, 0.7);
+  }
+
+  75% {
+    box-shadow:
+      0 0 8px rgb(75, 27, 130),
+      0 0 13px rgb(80, 31, 146),
+      0 0 18px rgba(83, 32, 150, 0.8),
+      0 0 23px rgba(78, 28, 135, 0.6);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(78, 28, 133),
+      0 0 10px rgb(83, 36, 153),
+      0 0 15px rgba(74, 31, 138, 0.7),
+      0 0 20px rgba(79, 25, 131, 0.5);
+  }
+}
+
+#question0,
+#question1,
+#question2,
+#question3 {
+  position: static;
+  top: auto;
+  left: auto;
+}
+
+.correct {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+.wrong {
+  animation: pulse-red 2s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow:
+      0 0 5px rgb(0, 255, 0),
+      0 0 10px rgb(0, 220, 0),
+    0 0 15px rgba(0, 200, 0, 0.7),
+      0 0 20px rgba(0, 180, 0, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(80, 255, 80),
+      0 0 15px rgb(100, 255, 100),
+      0 0 20px rgba(60, 255, 60, 0.9),
+      0 0 25px rgba(40, 255, 40, 0.7);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(0, 255, 0),
+      0 0 10px rgb(0, 220, 0),
+      0 0 15px rgba(0, 200, 0, 0.7),
+      0 0 20px rgba(0, 180, 0, 0.5);
+  }
+}
+
+
+@keyframes pulse-red {
+  0% {
+    box-shadow:
+      0 0 5px rgb(255, 0, 0),
+      0 0 10px rgb(220, 0, 0),
+      0 0 15px rgba(200, 0, 0, 0.7),
+      0 0 20px rgba(180, 0, 0, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px rgb(255, 80, 80),
+      0 0 15px rgb(255, 100, 100),
+      0 0 20px rgba(255, 60, 60, 0.9),
+      0 0 25px rgba(255, 40, 40, 0.7);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(255, 0, 0),
+      0 0 10px rgb(220, 0, 0),
+      0 0 15px rgba(200, 0, 0, 0.7),
+      0 0 20px rgba(180, 0, 0, 0.5);
+  }
+}
+
+#nextBtn {
+  position: absolute;
+  top: 68%;
+  left: 65%;
+  font-family: 'Minecraft Rus';
+  z-index: 10000;
+  font-size: 16px;
+  display: none;
+}
+
+.btn-purple1 {
+  background: #8e44ec;
+  color: white;
+  box-shadow: 0 4px 0 #6c2dbb;
+  transition: all 0.1s ease-in-out;
+  width: 150px;
+  height: 48px;
+}
+
+.btn-purple1:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #6c2dbb;
+}
+
+.btn-purple1:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #6c2dbb;
+}
+
+.question-image {
+  position:absolute;
+  width: 200px;
+  height: auto;
+  right: 160px;
+  bottom: -60px;
+  z-index: 10000;
+  border-radius: 16px;
+  border: 3px solid #7534ef; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.6s ease forwards ,pulse-glow-blue 8s infinite ease-in-out;
+  image-rendering: pixelated; 
+  margin: 20px auto;
+  display: block;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
